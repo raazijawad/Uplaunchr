@@ -40,4 +40,9 @@ const FeaturesSection = () => {
   )
 }
 
+{/* …or push an existing repository from the command line
+git remote add origin https://github.com/raazijawad/Uplaunchr.git
+git branch -M main
+git push -u origin main */}
+
 export default FeaturesSection
