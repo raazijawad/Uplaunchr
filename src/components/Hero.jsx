@@ -1,10 +1,11 @@
 import React from 'react'
 import heroImage from "../assets/images.jpeg"
+import rocketgrowth from "..//assets/Boosterrocket.png"
 
 const Hero = () => {
     return (
         <section id="home" className='container mx-auto flex flex-col md:flex-row justify-between items-center
-                        pt-44 pb-6 px-4 sm:px-6 lg:px-8'>
+                        pt-44 pb-6 px-4 sm:px-6 lg:px-8 -mt-20' >
 
             {/* left column */}
             <div className='w-full md:w-1/2 space-y-8'>
@@ -37,9 +38,9 @@ const Hero = () => {
                 </div>
             </div>
             <div className='w-full md:w-1/2'>
-                <div className='relative'>
-                    <img src={heroImage} className='size-3xl md:h-80 top-5 left-3 md:left-7 item-center  rounded-lg relative z-10 hover:scale-[1.02]
-                    transition-transform duration-300 mb-20 ' />
+                <div className='relative mt-15 md:w-180'>
+                    <img src={rocketgrowth} className='md:w-140 md:h-140 rounded-lg transform scale-x-[-1] 
+                                                       text-center md:ml-30' />
                 </div>
             </div>
         </section>
