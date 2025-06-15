@@ -1,5 +1,6 @@
 import React from 'react'
 import Booster from "../assets/Boosterrocket.png"
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 const ScheduleSection = () => {
     return (
@@ -21,6 +22,12 @@ const ScheduleSection = () => {
                         Automated appointments, manage teams availability, and deliver exceptional customer experience 
                         through seamless calender management.
                     </p>
+
+                    <a href="#" className='flex text-blue-500 font-semibold items-center gap-2 
+                                           hover:gap-4 transition-all hover:text-blue-600'>
+                        Explore scheduling features
+                        <IoIosArrowRoundForward className='size-8'/>
+                    </a>
                 </div>
             </div>
         </section>
