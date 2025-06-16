@@ -39,6 +39,10 @@ const PricingSection = () => {
                         <span className='text-xm sm:text-sm text-gray-600'>50</span>
                     </div>
                 </div>
+
+                <div>
+                    <p>Ready to get started?</p>
+                </div>
             </div>
         </div>
     </section>
