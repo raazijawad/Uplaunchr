@@ -33,7 +33,7 @@ const ServiceSection = () => {
         <section className='py-20 container mx-auto px-4 sm:px-4 lg:px-8'>
             <div className='grid grid-cols-1 md:grid-cols-2'>
                 {/* Header */}
-                <div className=''>
+                <div className='md:mt-12'>
                     <h2 className=' text-3xl md:text-4xl mb-6 font-bold md:w-4/5'>
                         Future of supports with new shapes
                     </h2>
@@ -64,7 +64,7 @@ const ServiceSection = () => {
                     </button>
                 </div>
                 {/* Service cards */}
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+                <div className='mt-8 grid grid-cols-1 md:grid-cols-2 gap-8'>
                     {
                         services.map((service, index) => (
                             <div key={index} className='bg-white max-w-72 cursor-pointer rounded-2xl p-6
