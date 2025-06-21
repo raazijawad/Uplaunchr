@@ -1,6 +1,7 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { BsChevronLeft } from 'react-icons/bs';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -100,6 +101,10 @@ const TestimonialSection = () => {
 
 
             {/* navigational button */}
+            <button className='w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center 
+            hover:bg-blue-500 hover:text-white transition-all duration-200'>
+               <BsChevronLeft className='size-6'/>
+            </button>
          </div>
       </section>
    )
