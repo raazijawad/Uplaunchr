@@ -1,8 +1,8 @@
 {
-  "homepage": "https://raazijawad.github.io/Uplaunchr",
   "name": "react-web-full-stack",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://raazijawad.github.io/uplaunchr.com",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,13 +10,14 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.8",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-icons": "^5.5.0"
+    "react-icons": "^5.5.0",
+    "swiper": "^11.2.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
