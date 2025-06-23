@@ -10,6 +10,7 @@ import MoniterSection from './components/MoniterSection'
 import PricingSection from './components/PricingSection'
 import ServiceSection from './components/ServiceSection'
 import TestimonialSection from './components/TestimonialSection'
+import NewsLetterSection from './components/NewsLetterSection'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
         <PricingSection/>
         <ServiceSection/>
         <TestimonialSection/>
+        <NewsLetterSection/>
       </div>
     </main>
   )
