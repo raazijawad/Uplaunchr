@@ -35,7 +35,14 @@ const NewsLetterSection = () => {
             </div>
         </div>
 
-        
+        <style>
+            {
+                /*clip path slant gradiant */
+                `.clip-path-slant {
+                clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)
+                }`
+            }
+        </style>
     </section>
   )
 }
