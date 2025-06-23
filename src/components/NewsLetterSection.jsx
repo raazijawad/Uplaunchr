@@ -22,11 +22,11 @@ const NewsLetterSection = () => {
                     <div className='flex flex-col sm:flex-row gap-4 sm:gap-0'>
                         <input type="email" placeholder='Enter Your Email'
                                className='w-full bg-white sm:w-auto md:w-80 px-4 sm:px-4 py-3 sm:py-4 rounded-xl
-                                          sm:rounded-l-xl sm:rounded-r-none focus:outline-none placeholder:font-medium' />
+                                          sm:rounded-l-xl sm:rounded-r-none focus:outline-none ' />
                         <button className='w-full sm:w-auto cursor-pointer bg-green-500 text-white px-6
                                            sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-l-none sm:rounded-r-lg
                                            flex items-center gap-2'>
-                            <span className='font-medium'>Discover</span>
+                            <span className=''>Discover</span>
                             <HiArrowRight className='size-5'/>
                         </button>
                     </div>
