@@ -11,6 +11,7 @@ import PricingSection from './components/PricingSection'
 import ServiceSection from './components/ServiceSection'
 import TestimonialSection from './components/TestimonialSection'
 import NewsLetterSection from './components/NewsLetterSection'
+import FooterSection from './components/FooterSection'
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
         <ServiceSection/>
         <TestimonialSection/>
         <NewsLetterSection/>
+        <FooterSection/>
       </div>
     </main>
   )
