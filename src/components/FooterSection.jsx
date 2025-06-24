@@ -40,7 +40,7 @@ const FooterSection = () => {
                             </div>
                             <span className='text-xl font-medium ml-1'>The Next Design</span>
                         </div>
-                        <p className='text-gray-600 mb-6'>The copy warned the little blind text, that where it came from it would 
+                        <p className='text-gray-600 mb-8 md:w-3/4'>The copy warned the little blind text, that where it came from it would 
                            have been rewritten a thousand times
                         </p>
                           
@@ -66,8 +66,25 @@ const FooterSection = () => {
                     </div>
 
                     {/* Footer nav items */}
-                    <div>
-                        
+                    <div className='lg:col-span-8'>
+                        <div className='grid grid-cols-2 md:grid-cols-4'>
+                            {Object.entries(footerLinks).map(([category, links], categoryIndex) => (
+                                <div key={category}>
+                                    <h1 className='text-lg font-medium mt-4 md:mt-0 mb-4 uppercase'>{category}</h1>
+
+                                    <ul className='space-y-3'>
+                                        {links.map((link, index) => (
+                                            <li key={index}>
+                                                <a href="" className='text-gray-600 hover:text-gray-900'>
+                                                    {link.name}
+                                                </a>
+                                            </li>
+                                        ))}
+                                        
+                                    </ul>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
