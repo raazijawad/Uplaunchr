@@ -22,44 +22,50 @@ const features = [
 
 const FeaturesSection = () => {
     return (
-        <motion.section 
-        variants={fadeIn('up', 0.2)}
-        initial="hidden"
-        whileInView="show"
-        className='max-w-7xl mx-auto px-4 py-16'>
+        <motion.section
+            variants={fadeIn('up', 0.2)}
+            initial="hidden"
+            whileInView="show"
+            className='max-w-7xl mx-auto px-4 py-16'>
             {/* heading texts */}
-            <motion.div 
-             variants={fadeIn('up', 0.3)}
-            className='text-center mb-12'>
+            <motion.div
+                variants={fadeIn('up', 0.3)}
+                className='text-center mb-12'>
                 <motion.h2
-                variants={textVariant(0.2)}
-                 className='text-3xl font-bold mb-4'>How can we help your buisness?</motion.h2>
+                    variants={textVariant(0.2)}
+                    className='text-3xl font-bold mb-4'>How can we help your buisness?</motion.h2>
 
                 <motion.p
-                variants={textVariant(0.4)}
-                className='text-gray-600'>when you resell besnik, you build trust and increase</motion.p>
+                    variants={textVariant(0.4)}
+                    className='text-gray-600'>when you resell besnik, you build trust and increase</motion.p>
             </motion.div>
 
             {/* features box */}
             <motion.div
-             variants={fadeIn('up', 0.5)}
-            className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+                variants={fadeIn('up', 0.5)}
+                className='grid grid-cols-1 md:grid-cols-3 gap-8'>
                 {features.map((features, index) => (
                     <motion.div
-                    variants={fadeIn('up', 0.3 * (index + 1))}
-                     key={index} className='flex flex-col text-center items-center p-6'>     
+                        variants={fadeIn('up', 0.3 * (index + 1))}
+                        key={index} className='flex flex-col text-center items-center p-6'>
                         <motion.div
-                         variants={fadeIn('down', 0.4 * (index + 1))} 
-                        className='w-24 h-24 rounded-full mb-6 flex items-center justify-center' style={{
-                            backgroundColor: index === 0 ? "#F1EFFD" : index === 1 ? "#FEE7E7" : "#FFF3E4"
-                        }}>
-                            <motion.div 
-                            variants={fadeIn('up', 0.5 * (index + 1))}
-                            className='text-3xl'>{features.icon}
+                            variants={fadeIn('down', 0.4 * (index + 1))}
+                            className='w-24 h-24 rounded-full mb-6 flex items-center justify-center' style={{
+                                backgroundColor: index === 0 ? "#F1EFFD" : index === 1 ? "#FEE7E7" : "#FFF3E4"
+                            }}>
+                            <motion.div
+                                variants={fadeIn('up', 0.5 * (index + 1))}
+                                className='text-3xl'>{features.icon}
                             </motion.div>
                         </motion.div>
-                        <h3 className='text-2xl font-medium mb-3'>{features.title}</h3>
-                        <p className='text-gray-500'>{features.Description}</p>
+                        <motion.h3
+                            variants={textVariant(0.3)}
+                            className='text-2xl font-medium mb-3'>{features.title}
+                        </motion.h3>
+                        <motion.p
+                            variants={fadeIn('up', 0.5 * (index + 1))}
+                            className='text-gray-500'>{features.Description}
+                        </motion.p>
                     </motion.div>
                 ))}
 
@@ -70,7 +76,7 @@ const FeaturesSection = () => {
                 <button className='bg-blue-600 text-white text-medium py-3 px-8 rounded-full 
                                      cursor-pointer font-medium hover:bg-blue-700 transition-colors 
                                      relative '>Become a partner
-                <div className='absolute -z-10 w-full h-full rounded-full bg-blue-600/50 blur-xl top-0 left-0'></div>                     
+                    <div className='absolute -z-10 w-full h-full rounded-full bg-blue-600/50 blur-xl top-0 left-0'></div>
                 </button>
             </div>
 
