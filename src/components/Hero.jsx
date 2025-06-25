@@ -36,10 +36,14 @@ const Hero = () => {
                     <span className='inline-block ml-2 animate-pulse'>⏰</span>
                 </motion.h1>
 
-                <p className='text-gray-600 text-lg md:text-xl max-w-xl'>
+                <motion.p
+                variants={fadeIn("up", 0.4)}
+                initial="hidden"
+                whileInView="show" 
+                className='text-gray-600 text-lg md:text-xl max-w-xl'>
                     Get the most accurate leads, sales people training and conversions,
                     tool and more - all within the same one billing.
-                </p>
+                </motion.p>
 
                 <div className='flex gap-3 max-w-md'>
                     <input type="email" placeholder='Email address' className='flex-1 px-6 py-4 border 
