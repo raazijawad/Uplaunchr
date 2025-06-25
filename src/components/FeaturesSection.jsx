@@ -72,13 +72,19 @@ const FeaturesSection = () => {
             </motion.div>
 
             {/* button */}
-            <div className='text-center mt-12'>
-                <button className='bg-blue-600 text-white text-medium py-3 px-8 rounded-full 
+            <motion.div 
+            variants={fadeIn('up', 0.7)}
+            className='text-center mt-12'>
+                <motion.button 
+                variants={fadeIn('up', 0.8)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className='bg-blue-600 text-white text-medium py-3 px-8 rounded-full 
                                      cursor-pointer font-medium hover:bg-blue-700 transition-colors 
                                      relative '>Become a partner
                     <div className='absolute -z-10 w-full h-full rounded-full bg-blue-600/50 blur-xl top-0 left-0'></div>
-                </button>
-            </div>
+                </motion.button>
+            </motion.div>
 
         </motion.section>
     )
