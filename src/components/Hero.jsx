@@ -58,12 +58,16 @@ const Hero = () => {
                     cursor-pointer transition-all hover:shadow-lg hover:shadow-blue-300'>→</button>
                 </motion.div>
             </div>
-            <div className='w-full md:w-1/2'>
+            <motion.div 
+            variants={fadeIn("left", 0.5)}
+                initial="hidden"
+                whileInView="show" 
+            className='w-full md:w-1/2'>
                 <div className='relative mt-15 md:w-180'>
                     <img src={rocketgrowth} className='md:w-140 md:h-140 rounded-lg transform scale-x-[-1] 
                                                        text-center md:ml-30' />
                 </div>
-            </div>
+            </motion.div>
         </section>
     )
 }
