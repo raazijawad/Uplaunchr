@@ -45,14 +45,18 @@ const Hero = () => {
                     tool and more - all within the same one billing.
                 </motion.p>
 
-                <div className='flex gap-3 max-w-md'>
+                <motion.div 
+                variants={fadeIn("up", 0.5)}
+                initial="hidden"
+                whileInView="show" 
+                className='flex gap-3 max-w-md'>
                     <input type="email" placeholder='Email address' className='flex-1 px-6 py-4 border 
                     border-gray-200 rounded-xl focus:outline-none focus:border-blue-600 focus:ring-2
                     focus:ring-blue-100 transition-all'/>
 
                     <button className='bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700
                     cursor-pointer transition-all hover:shadow-lg hover:shadow-blue-300'>→</button>
-                </div>
+                </motion.div>
             </div>
             <div className='w-full md:w-1/2'>
                 <div className='relative mt-15 md:w-180'>
