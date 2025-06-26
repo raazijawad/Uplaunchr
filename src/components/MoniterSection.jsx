@@ -45,9 +45,13 @@ const MoniterSection = () => {
                 </motion.div>
                 
                 {/* Right */}
-                <div className='md:w-1/2 w-full'>
-                    <img className='w-full h-auto' src={MRockter} alt="" />
-                </div>
+                <motion.div
+                variants={fadeIn('left', 0.3)}
+                className='md:w-1/2 w-full'>
+                    <motion.img 
+                    variants={fadeIn('up', 0.5)}
+                    className='w-full h-auto' src={MRockter} alt="" />
+                </motion.div>
 
                 
             </div>
