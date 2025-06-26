@@ -3,7 +3,7 @@ import MRockter from "../assets/rocketfly.jpg"
 import { IoIosArrowRoundForward } from "react-icons/io";
 import MRockter2 from "../assets/MoniterRocket.webp"
 import { motion } from 'framer-motion';
-import { fadeIn } from '../ultils/motion';
+import { fadeIn, textVariant } from '../ultils/motion';
 import { LuMonitorPause } from 'react-icons/lu';
 
 const MoniterSection = () => {
