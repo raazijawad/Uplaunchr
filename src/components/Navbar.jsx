@@ -114,11 +114,15 @@ const Navbar = () => {
                             href={link.href}>{link.label}</motion.a>
                     ))}
 
-                    <button className="w-full bg-blue-600 text-white px-6 py-2.5 rounded-lg 
+                    <motion.button
+                    variants={fadeIn('up', 0.4)}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+                    className="w-full bg-blue-600 text-white px-6 py-2.5 rounded-lg 
                                    hover:bg-blue-800 text-sm font-medium transition-all hover:shadow-lg
                                    hover:shadow-blue-100">
                         <a href="#newslatets"> Get in Touch</a>
-                    </button>
+                    </motion.button>
 
                 </motion.div>
             </motion.div>
