@@ -91,7 +91,11 @@ const Navbar = () => {
         {/*  mobile menu items */ }
     {
         isMenuOpen && (
-            <div className="md:hidden bg-white border-t border-gray-100 py-4">
+            <motion.div 
+            variants={fadeIn('down', 0.2)}
+          initial="hidden"
+          animate="show"
+            className="md:hidden bg-white border-t border-gray-100 py-4">
                 <div className="container mx-auto px-4 space-y-3">
                     {navLinks.map((link, index) => (
                         <a
@@ -114,7 +118,7 @@ const Navbar = () => {
                     </button>
 
                 </div>
-            </div>
+            </motion.div>
         )
     }
         </motion.nav >
