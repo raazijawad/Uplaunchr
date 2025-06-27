@@ -59,17 +59,30 @@ const Hero = () => {
                 </motion.div>
             </div>
             <motion.div 
-            variants={fadeIn("left", 0.5)}
-                initial="hidden"
-                whileInView="show" 
-            className='w-full md:w-1/2'>
-                <div className='relative mt-15 md:w-180'>
-                    <img src={rocketgrowth} className='md:w-140 md:h-140 rounded-lg transform scale-x-[-1] 
-                                                       text-center md:ml-30' />
-                </div>
-            </motion.div>
+  variants={fadeIn("left", 0.5)}
+  initial="hidden"
+  whileInView="show"
+  className="w-full md:w-1/2"
+>
+  <div className="relative mt-15 md:w-180">
+    <motion.img 
+      src={rocketgrowth}
+      className="md:w-140 md:h-140 rounded-lg transform scale-x-[-1] text-center md:ml-30"
+      animate={{ y: [0, -20, 5] }}  // Up-down motion
+      transition={{
+        duration: 2,                 // Total time for one full cycle
+        repeat: Infinity,           // Infinite loop
+        repeatType: "loop",         // Continuous
+        ease: "easeInOut"
+      }}
+    />
+  </div>
+</motion.div>
+
         </section>
     )
 }
 
 export default Hero 
+
+
