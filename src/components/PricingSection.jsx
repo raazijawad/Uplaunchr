@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { motion } from 'framer-motion';
+import { fadeIn, textVariant } from '../ultils/motion';
 
 const PricingSection = () => {
     const [productCount, setProductCount] = useState(1);
@@ -8,23 +10,39 @@ const PricingSection = () => {
     const businessPrice = Math.round(7500 * (productCount / 50)) 
 
   return (
-    <section className='py-20 px-4'>
+    <motion.section
+    variants={fadeIn('up', 0.2)}
+      initial="hidden"
+      whileInView="show"
+    className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
-            <h2 className='text-3xl md:text-4xl font-bold text-center mb-16'>Pricing</h2>
+            <motion.h2 
+            variants={textVariant(0.3)}
+            className='text-3xl md:text-4xl font-bold text-center mb-16'>Pricing</motion.h2>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-12'>
+            <motion.div 
+            variants={fadeIn('up', 0.4)}
+            className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-12'>
                 {/* Starter plane */}
-                <div className='bg-white p-8 rounded-lg shadow-lg'>
-                    <h3 className='text-xl text-gray-600 mb-4'>Starter</h3>
-                    <p className='text-3xl font-bold mb-6'>${starterPrice}/mo</p>
-                </div>
+                <motion.div 
+                variants={fadeIn('right', 0.5)}
+                className='bg-white p-8 rounded-lg shadow-lg'>
+                    <motion.h3 
+                    variants={fadeIn('up', 0.6)}
+                    className='text-xl text-gray-600 mb-4'>Starter</motion.h3>
+                    <motion.p 
+                    variants={fadeIn('up', 0.7)}
+                    className='text-3xl font-bold mb-6'>${starterPrice}/mo</motion.p>
+                </motion.div>
 
                 {/* Starter plane */}
-                <div className='bg-white p-8 rounded-lg shadow-lg'>
+                <motion.div
+                variants={fadeIn('left', 0.5)}
+                className='bg-white p-8 rounded-lg shadow-lg'>
                     <h3 className='text-xl text-gray-600 mb-4'>Business</h3>
                     <p className='text-3xl font-bold mb-6'>${businessPrice}/mo</p>
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
 
             <div className='max-w-xl mx-auto'>
                 <p className='text-center text-gray-600 mb-4'>{productCount}product</p>
@@ -47,7 +65,7 @@ const PricingSection = () => {
                 </div>
             </div>
         </div>
-    </section>
+    </motion.section>
   )
 }
 
