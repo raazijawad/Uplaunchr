@@ -39,7 +39,9 @@ const PricingSection = () => {
                 <motion.div
                 variants={fadeIn('left', 0.5)}
                 className='bg-white p-8 rounded-lg shadow-lg'>
-                    <h3 className='text-xl text-gray-600 mb-4'>Business</h3>
+                    <motion.h3 
+                    variants={fadeIn('up', 0.6)}
+                    className='text-xl text-gray-600 mb-4'>Business</motion.h3>
                     <p className='text-3xl font-bold mb-6'>${businessPrice}/mo</p>
                 </motion.div>
             </motion.div>
