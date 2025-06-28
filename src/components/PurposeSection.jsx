@@ -20,9 +20,6 @@ const PurposeSection = () => {
     ]
     return (
         <motion.section
-            variants={fadeIn('up', 0.2)}
-            initial="hidden"
-            whileInView="show"
             className='w-full bg-gray-200 py-16 px-4 sm:px-6 md:px-8' id='about'>
             <div className='max-w-6xl mx-auto'>
                 <motion.div
