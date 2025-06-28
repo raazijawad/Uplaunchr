@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { fadeIn, textVariant } from '../ultils/motion'
 
 const PurposeSection = () => {
     const features = [
@@ -18,7 +19,9 @@ const PurposeSection = () => {
         }
     ]
     return (
-        <section className='w-full bg-gray-200 py-16 px-4 sm:px-6 md:px-8' id='about'>
+        <motion.section 
+        variants={fadeIn('right', 0.2)}
+        className='w-full bg-gray-200 py-16 px-4 sm:px-6 md:px-8' id='about'>
             <div className='max-w-6xl mx-auto'>
                 <motion.div
                     variants={fadeIn('right', 0.2)}
@@ -69,7 +72,7 @@ const PurposeSection = () => {
                     </motion.div>
                 </motion.div>
             </div>
-        </section>
+        </motion.section>
     )
 }
 
