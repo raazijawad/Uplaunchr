@@ -97,10 +97,16 @@ const ServiceSection = () => {
                             key={index} className='bg-white max-w-72 cursor-pointer rounded-2xl p-6
                                                         hover:scale-102 hover:shadow-xl transition-all 
                                                         duration-300'>
-                                <div className='mb-4'>{service.icone}</div>
+                                <motion.div 
+                                variants={fadeIn('down', 0.4 * (index + 1))}
+                                className='mb-4'>{service.icone}</motion.div>
 
-                                <h3 className='text-xl font-semibold mb-2'>{service.title}</h3>
-                                <p className='text-gray-600 mb-4'>{service.description}</p>
+                                <motion.h3
+                                 variants={textVariant(0.3)}
+                                 className='text-xl font-semibold mb-2'>{service.title}</motion.h3>
+                                <motion.p
+                                variants={fadeIn('up', 0.5 * (index + 1))}
+                                className='text-gray-600 mb-4'>{service.description}</motion.p>
 
                                 <a href={service.link} className='text-indigo-600 font-medium hover:text-indigo-700
                                                                    transition-colors'>LEARN MORE</a>
