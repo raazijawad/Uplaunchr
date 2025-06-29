@@ -36,10 +36,9 @@ const services = [
 const ServiceSection = () => {
     return (
         <motion.section
+            variants={fadeIn('up', 0.2)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={fadeIn('up', 0.3)}
             className='py-20 container mx-auto px-4 sm:px-4 lg:px-8' id='services'>
             <motion.div
                 variants={fadeIn('up', 0.3)}
