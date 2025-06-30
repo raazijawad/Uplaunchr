@@ -101,10 +101,16 @@ const TestimonialSection = () => {
                {
                   testimonials.map((testimonials, index) => (
                      <SwiperSlide key={index} className='h-full md:py-12 py-4'>
-                        <div className='text-center p-4 bg-white rounded-lg shadow-md  h-full flex flex-col'>
-                           <div className='w-24 h-24 mx-auto mb-4'>
-                              <img className='w-full h-full object-cover rounded-full ' src={testimonials.image} alt="" />
-                           </div>
+                        <motion.div
+                        variants={fadeIn('up', 0.3 * (index + 1))}
+                        className='text-center p-4 bg-white rounded-lg shadow-md  h-full flex flex-col'>
+                           <motion.div 
+                           variants={fadeIn('down', 0.4 * (index + 1))}
+                           className='w-24 h-24 mx-auto mb-4'>
+                              <motion.img 
+                              variants={fadeIn('up', 0.5 * (index + 1))}
+                              className='w-full h-full object-cover rounded-full ' src={testimonials.image} alt="" />
+                           </motion.div>
 
                            <div className='text-center'>
                               {[...Array(5)].map((_, starIndex) => (
@@ -114,7 +120,7 @@ const TestimonialSection = () => {
 
                            <h3 className='text-xl font-semibold mb-3'>{testimonials.name}</h3>
                            <p className='text-gray-600'>{testimonials.text}</p>
-                        </div>
+                        </motion.div>
                      </SwiperSlide>
                   ))
                }
