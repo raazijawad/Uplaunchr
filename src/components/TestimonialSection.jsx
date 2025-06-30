@@ -138,10 +138,14 @@ const TestimonialSection = () => {
             <motion.div 
             variants={fadeIn('up', 0.7)}
             className='flex justify-center gap-4 mt-8'>
-               <button className='swiper-button-prev-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center 
+               <motion.button 
+               variants={fadeIn('right', 0.8)}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+               className='swiper-button-prev-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center 
                                 hover:bg-blue-500 hover:text-white transition-all duration-200 cursor-pointer'>
                   <BsChevronLeft className='size-6' />
-               </button>
+               </motion.button>
 
                <button className='swiper-button-next-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center 
                                 hover:bg-blue-500 hover:text-white transition-all duration-200 cursor-pointer'>
