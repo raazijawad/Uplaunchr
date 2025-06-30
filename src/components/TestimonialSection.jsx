@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { fadeIn } from '../ultils/motion';
+import { fadeIn, textVariant } from '../ultils/motion';
 
 const testimonials = [
    {
@@ -112,14 +112,20 @@ const TestimonialSection = () => {
                               className='w-full h-full object-cover rounded-full ' src={testimonials.image} alt="" />
                            </motion.div>
 
-                           <div className='text-center'>
+                           <motion.div 
+                           variants={fadeIn('up', 0.4 * (index + 1))}
+                           className='text-center'>
                               {[...Array(5)].map((_, starIndex) => (
                                  <span className='text-amber-400 '>★</span>
                               ))}
-                           </div>
+                           </motion.div>
 
-                           <h3 className='text-xl font-semibold mb-3'>{testimonials.name}</h3>
-                           <p className='text-gray-600'>{testimonials.text}</p>
+                           <motion.h3 
+                           variants={textVariant(0.3)}
+                           className='text-xl font-semibold mb-3'>{testimonials.name}</motion.h3>
+                           <motion.p 
+                           variants={fadeIn('up', 0.6 * (index + 1))}
+                           className='text-gray-600'>{testimonials.text}</motion.p>
                         </motion.div>
                      </SwiperSlide>
                   ))
@@ -129,7 +135,9 @@ const TestimonialSection = () => {
 
 
             {/* navigational button */}
-            <div className='flex justify-center gap-4 mt-8'>
+            <motion.div 
+            variants={fadeIn('up', 0.7)}
+            className='flex justify-center gap-4 mt-8'>
                <button className='swiper-button-prev-custom w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center 
                                 hover:bg-blue-500 hover:text-white transition-all duration-200 cursor-pointer'>
                   <BsChevronLeft className='size-6' />
@@ -139,7 +147,7 @@ const TestimonialSection = () => {
                                 hover:bg-blue-500 hover:text-white transition-all duration-200 cursor-pointer'>
                   <BsChevronRight className='size-6' />
                </button>
-            </div>
+            </motion.div>
          </motion.div>
       </motion.section>
    )
