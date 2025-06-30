@@ -2,10 +2,12 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
+import { motion } from 'framer-motion';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { fadeIn } from '../ultils/motion';
 
 const testimonials = [
    {
@@ -52,11 +54,19 @@ const testimonials = [
 
 const TestimonialSection = () => {
    return (
-      <section className='py-16 px-4 max-w-7xl mx-auto' id='testimonials'>
-         <div className='text-center mb-12'>
-            <h2 className='text-3xl md:text-4xl font-bold mb-4'>What our happy client say</h2>
+      <motion.section
+         variants={fadeIn('up', 0.2)}
+         initial="hidden"
+         whileInView="show"
+         className='py-16 px-4 max-w-7xl mx-auto' id='testimonials'>
+         <motion.div
+         variants={fadeIn('up', 0.3)}
+         className='text-center mb-12'>
+            <motion.h2 
+            variants={fadeIn('up', 0.3)}
+            className='text-3xl md:text-4xl font-bold mb-4'>What our happy client say</motion.h2>
             <p className='text-gray-600 text-sm font-medium'>Things that make it the best place to start trading</p>
-         </div>
+         </motion.div>
 
          {/* testimonial cards */}
          <div className='relative'>
@@ -69,7 +79,7 @@ const TestimonialSection = () => {
                   }
                }
                spaceBetween={30}
-               pagination={{  clickable: true}}
+               pagination={{ clickable: true }}
                breakpoints={{
                   0: {
                      slidesPerView: 1,
@@ -121,7 +131,7 @@ const TestimonialSection = () => {
                </button>
             </div>
          </div>
-      </section>
+      </motion.section>
    )
 }
 
