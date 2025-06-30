@@ -65,11 +65,15 @@ const TestimonialSection = () => {
             <motion.h2 
             variants={fadeIn('up', 0.3)}
             className='text-3xl md:text-4xl font-bold mb-4'>What our happy client say</motion.h2>
-            <p className='text-gray-600 text-sm font-medium'>Things that make it the best place to start trading</p>
+            <motion.p
+            variants={fadeIn('up', 0.4)}
+             className='text-gray-600 text-sm font-medium'>Things that make it the best place to start trading</motion.p>
          </motion.div>
 
          {/* testimonial cards */}
-         <div className='relative'>
+         <motion.div
+         variants={fadeIn('up', 0.5)} 
+         className='relative'>
             {/* swiper cards */}
             <Swiper
                navigation={
@@ -130,7 +134,7 @@ const TestimonialSection = () => {
                   <BsChevronRight className='size-6' />
                </button>
             </div>
-         </div>
+         </motion.div>
       </motion.section>
    )
 }
